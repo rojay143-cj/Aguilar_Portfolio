@@ -78,7 +78,8 @@ header{
     height: 400px;
     flex-direction: column;
     overflow: hidden;
-}.btn-next, .btn-prev{
+    scroll-behavior: smooth;
+}.slide-button{
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -90,6 +91,9 @@ header{
     color: #F8F4E1;
     border: none;
     opacity: 0.8;
+}.btn-prev{
+    transform: rotate(180deg);
+    display: none;
 }@keyframes data{
     from {opacity: 0.5;}
     to {opacity: 1;}

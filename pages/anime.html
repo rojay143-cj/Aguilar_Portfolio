@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/stream.js"></script>
-    <link rel="stylesheet" href="../css/sensei.css">
+    <link rel="stylesheet" href="css/sensei.css">
     <title>Anime-Sensei</title>
     <style>
         
@@ -17,7 +16,7 @@
     <div class="content-container">
         <header>
             <div class="navbar navbar-light justify-content-between nav">
-                <div><img src="../image/anime-sensei-logo-no-bg.png" alt="logo" class="nav-bar navbar-brand brand">
+                <div><img src="image/anime-sensei-logo-no-bg.png" alt="logo" class="nav-bar navbar-brand brand">
                 </div>
                 <div class="form-inline m-3">
                   <input class="form-control mr-sm-2 bg-transparent" id="txt-search" type="search" placeholder="Search..." aria-label="Search">
@@ -42,28 +41,32 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="movie-container m-auto">
-                        <button class="btn-prev">&#8592;</button>
-                        <ul class="data mt-n5 d-flex justify-content-center align-items-center align-content-center flex-wrap">
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/1.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/2.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/3.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/4.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/5.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/6.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/1.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/2.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/3.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/4.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/5.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                            <li class="list-group-item movies"><a href="#"><img src="../image/sample/6.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
-                        </ul>
-                        <button class="btn-next">&#8594;</button>
+                    <div class="latest d-flex justify-content-center m-auto">
+                        <div class="movie-container">
+                            <button id="btn-prev" class="btn-prev mr-n5 slide-button">&#x27AD;</button>
+                            <ul class="data mt-n5 d-flex justify-content-center align-items-center align-content-center flex-wrap">
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/1.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/2.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/3.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/4.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/5.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/6.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/1.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/2.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/3.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/4.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/5.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                                <li class="list-group-item movies"><a href="#"><img src="../image/sample/6.jpg" alt="Movies" class="bg-dark img-thumbnail"></a></li>
+                            </ul>
+                            <button class="btn-next ml-n5 slide-button">&#x27AD;</button>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-<script src="js/stream.js"></script>
+<script src="js/API-anime.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>
