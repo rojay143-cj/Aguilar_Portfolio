@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" max-width="2000">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Home</title>
+    <style>
+        .CV{
+            background-image: url(assets/Resume1.jpg);
+            background-size: contain; 
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="main">
+                <div class="align-self-center profile-pic">
+                    <img src="image/profile/christian_james.JPG" alt="christian james aguilar" class="img-thumbnail rounded-pill shadow-lg">
+                </div>
+                <div class="card background p-2 rounded shadow-lg bg-gradient">
+                    <h1 class="color-blue"><strong>Christian James T. Aguilar</strong></h1>
+                    <h5>Bachelor of Science in Information Technology</h5>
+                    <p>Skillset: Software / Web Development <br> FullStack Developer <br> UI/UX Design <br>Project Management <br> Databases and Systems </p>
+                    <button id="btn-cvFile" class="btn p-3 w-50 bg-blue" data-bs-target="#fullscreenModal" data-bs-toggle="modal">CV & Certificates</button>
+                </div>
+            </div>
+            <div class="offset"></div>
+            <div class="cover">
+                <div class="card links">
+                    <ul class="d-flex flex-row justify-content-center align-item-center p-2 list-group flex-wrap gap-5">
+                        <li class="list-group-item mr-2 rounded"><a href="pages/anime.html" class="text-light text-decoration-none"><img src="image/profile/portfolio/anime-sensei.png" alt="anime-sensei" width="200" height="250"><br>Anime-Sensei (API)</a></li>
+                        <li class="list-group-item mr-2 rounded"><a href="" class="text-light text-decoration-none"><img src="image/profile/portfolio/2.webp" alt="" width="200" height="250"><br>Point of Sale</a></li>
+                        <li class="list-group-item mr-2 rounded"><a href="" class="text-light text-decoration-none"><img src="image/profile/portfolio/3.jfif" alt="" width="200" height="250"><br>Photography</a></li>
+                        <li class="list-group-item mr-2 rounded"><a href="" class="text-light text-decoration-none"><img src="image/profile/portfolio/4.jpg" alt="" width="200" height="250"><br>Game</a></li>
+                        <li class="list-group-item mr-2 rounded"><a href="" class="text-light text-decoration-none"><img src="image/profile/portfolio/5.png" alt="" width="200" height="250"><br>Movie</a></li>
+                        <li class="list-group-item mr-2 rounded"><a href="" class="text-light text-decoration-none"><img src="image/profile/portfolio/6.jpg" alt="" width="200" height="250"><br>Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer col-lg-12 text-light flex-wrap w-100 text-center">
+                <div class="card col-lg-5 bg-transparent border-0 mt-5 mb-5">
+                    <h5 class="mb-3 text-light">Get in Touch</h5>
+                    <p class="small w-75 h-100 des m-auto">Work in a professional organisation where
+                        my skills and knowledge could be best
+                        utilized and a position that can provide a
+                        steady growth and learning opportunity to
+                        practice my profession and practical
+                        experience extensively.</p>
+                    <ul class="medias">
+                        <li class="mr-2"><img src="image/profile/icons/facebook.png" alt="facebook"></li>
+                        <li class="mr-2"><img src="image/profile/icons/messenger.webp" alt="messenger"></li>
+                        <li class="mr-2"><img src="image/profile/icons/discord.png" alt="discord"></li>
+                        <li class="mr-2"><img src="image/profile/icons/instagram.webp" alt="instagram"></li>
+                    </ul>
+                </div>
+                <div class="card col-lg-3 bg-transparent border-0 mt-5 mb-5">
+                    <h5 class="mb-3 text-light">Programming I know</h5>
+                    <p class="small des">C++ Language
+                        <br>Java Language
+                        <br>C# Language
+                        <br> VB Language
+                        <br> Web Development and Web Design - CSS, HTML, <br>figma, bootstrap, Tailwind, PHP, JavaScript
+                        <br>PC Troubleshooting, Assembling and Software
+                        Installation
+                    </p>
+                </div>
+                <div class="card col-lg-3 bg-transparent border-0 mt-5 mb-5">
+                    <h5 class="mb-3 text-light">Reach me at</h5>
+                    <ul class="reachme small">
+                        <li class="mb-1">&#128241; <span>+63 9061008410</span></li>
+                        <li class="mb-1">&#128222; <span>+63 9559320216</span></li>
+                        <li class="mb-1"><span class="text-light bg-info p-1 rounded">f</span><span class="ml-2">https://www.facebook.com/chriz.lim.56</span></li>
+                        <li class="mb-1 text-light">✉ <span>rojaymerlin@gmail.com</span></li>
+                        <li class="mb-1">📍 <span>Purok Santol, Barangay
+                            Bagacay, Dumaguete City</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content bg-transparent color-blue">
+            <div class="modal-header">
+              <h5 class="modal-title text-center w-100 bg-dark" id="fullscreenModalLabel"><strong>CSV and Certificates</strong></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center gap-5">
+              <div class="card CV col-4"></div>
+              <div class="card col-4 bg-transparent justify-content-center gap-3">
+                <img src="assets/infosec.png" alt="Information Security">
+                <img src="assets/infosec2.jpg" alt="Information Security">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

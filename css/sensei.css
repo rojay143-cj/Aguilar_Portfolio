@@ -1,0 +1,106 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}body{
+    background-color: #000000;
+    font-size: 12px;
+}
+header{
+    height: 100ch;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}#btn-search{
+    background-color:#00ADB5;
+    color: #F8F4E1;
+}#btn-search:hover{
+    color: #000000;
+}
+.brand{
+    width: 150px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 15px;
+}.content-container{
+    max-width: 2000px;
+    margin: auto;
+}.cover{
+    height: 100ch;
+    top: 0;
+    opacity: 0.4;
+    background-color: aliceblue;
+    background-image: url(../image/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 2000px;
+}.btn-cov{
+    background-color:#00ADB5;
+    color: #F8F4E1;
+    font-size: 20px;
+    font-weight: bold;
+}.cov-des{
+    color: #f8f4e169;
+    font-size: 0.9rem;
+}.cov-des h5,p{
+    font-style: italic;
+}.cov-des p{
+    width: auto;
+    height: 105px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.movie-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.movies{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    image-rendering: pixelated;
+    transition: transform 0.5s;
+}.data{
+    max-width: 1800px;
+    width: fit-content;
+    height: 400px;
+    flex-direction: column;
+    overflow: hidden;
+}.btn-next, .btn-prev{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    z-index: 1;
+    animation: data 1.5s;
+    background-color:#393E46;
+    /* color: rgb(106, 21, 28); */
+    color: #F8F4E1;
+    border: none;
+    opacity: 0.8;
+}@keyframes data{
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+}.movies img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: none;
+}.movies img:hover{
+    transform: scale(1.0);
+    border: 1px solid #F8F4E1;
+}
+
+/* index */
