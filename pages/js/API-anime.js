@@ -11,20 +11,17 @@
 //     };
     
 //     $.ajax(settings).done(function (response) {
-//         if(response && response.data && response.data.length > 0){
-//             $('.data').empty();
-//             response.data.forEach(function(suggestion){
-//                 const movieTitle = suggestion.title;
-//                     const movieDetails = suggestion.synopsis;
-//                     const movieID = suggestion._id;
-//                     const MovieUrl = suggestion.link;
-//                     const movieImage = suggestion.image;
-//                     $('.cover').css('background-image',`url(${movieImage})`);
-//             });
-//         }
-//         console.log(response);
+//         const animeTitle = response.title;
+//         const animeDesc = response.synopsis;
+//         const animeLink = response.link;
+//         const animeImage = response.image;
+//         const repImage = `<img src="${animeImage}" alt="${animeTitle}">`;
+//         $('#cover').append(repImage);
+//         $('#animeTitle').html(`${animeTitle}`);
+//         $('#animeDesc').html(`${animeDesc}`);
 //     });
 // });
+
 // $(document).ready(function(){
 //     $('#btn-search').on('click',function(){
 //         const txtSearch = $('#txt-search').val();
@@ -65,32 +62,32 @@
 //         });
 //     });
 // });
-// $(document).ready(function(){
-//     const settings = {
-//         async: true,
-//         crossDomain: true,
-//         url: 'https://anime-db.p.rapidapi.com/anime?page=1&size=40&search=&genres=Fantasy%2CDrama&sortBy=ranking&sortOrder=asc',
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': 'de77fce5e0mshea603e68dd0977dp1848aajsn2ce85ddd432b',
-//             'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
-//         }
-//     };
+
+$(document).ready(function(){
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://anime-db.p.rapidapi.com/anime?page=1&size=40&search=&genres=Fantasy%2CDrama&sortBy=ranking&sortOrder=asc',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'de77fce5e0mshea603e68dd0977dp1848aajsn2ce85ddd432b',
+            'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
+        }
+    };
     
-//     $.ajax(settings).done(function (response) {
-//         if(response && response.data && response.data.length > 0){
-//             $('.data').empty();
-//             response.data.forEach(function(suggestion){
-//                 const movieTitle = suggestion.title;
-//                     const movieDetails = suggestion.synopsis;
-//                     const movieID = suggestion._id;
-//                     const MovieUrl = suggestion.link;
-//                     const movieImage = suggestion.image;
-//                     const movieResults = `<li class="list-group-item movies">
-//                         <a href="${MovieUrl}" target="_blank"><img src="${movieImage}" alt="Movies" class="bg-dark img-thumbnail"></a></li>`;
-//                        $('.data').append(movieResults);
-//             });
-//         }
-//         console.log(response);
-//     });
-// });
+    $.ajax(settings).done(function (response) {
+        if(response && response.data && response.data.length > 0){
+            $('.data').empty();
+            response.data.forEach(function(suggestion){
+                const movieTitle = suggestion.title;
+                    const movieDetails = suggestion.synopsis;
+                    const movieID = suggestion._id;
+                    const MovieUrl = suggestion.link;
+                    const movieImage = suggestion.image;
+                    const movieResults = `<li class="list-group-item movies">
+                        <a href="${MovieUrl}" target="_blank"><img src="${movieImage}" alt="Movies" class="bg-dark img-thumbnail"></a></li>`;
+                       $('.data').append(movieResults);
+            });
+        }
+    });
+});
